@@ -155,7 +155,7 @@ def main():
                 extension = args.ext
             if img_mode == 'RGBA':  # RGBA images should be saved in png format
                 extension = 'png'
-            if args.suffix == '':
+            if args.suffix == '' or args.suffix == 'out':
                 save_path = os.path.join(args.output, f'{imgname}.{extension}')
             else:
                 save_path = os.path.join(args.output, f'{imgname}_{args.suffix}.{extension}')
